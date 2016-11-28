@@ -43,6 +43,9 @@ public class BasicSample {
         observable1.subscribe(observer);
     }
 
+    /**
+     * short Observable create
+     */
     public static void testJust() {
         Observable.just("Hello", "World")
                 .subscribe(new Subscriber<String>() {
@@ -63,6 +66,9 @@ public class BasicSample {
                 });
     }
 
+    /**
+     * short observer create
+     */
     public static void testAction1() {
         Observable.just("Hello2", "World2")
                 .subscribe(new Action1<String>() {
