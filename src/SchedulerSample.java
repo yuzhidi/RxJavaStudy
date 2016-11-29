@@ -12,6 +12,10 @@ public class SchedulerSample {
     static void rxJavaTest3() {
         Observable.just("Hello", "Word")
                 .subscribeOn(Schedulers.newThread())//指定 subscribe() 发生在新的线程
+                        /**
+                         * rxandroid use: AndroidSchedulers.mainThread()
+                         *
+                         */
                 .observeOn(Schedulers.newThread())// 指定 Subscriber 的回调发生在主线程
                 .subscribe(new Action1<String>() {
                     @Override
