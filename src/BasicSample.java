@@ -36,6 +36,8 @@ public class BasicSample {
             public void call(Subscriber<? super String> subscriber) {
                 subscriber.onNext("Hello");
                 subscriber.onNext("Wrold");
+                // onError , onCompleted are mutual exclusion; can only one execute
+                subscriber.onError(new Throwable("test err"));
                 subscriber.onCompleted();
             }
         });
@@ -80,7 +82,10 @@ public class BasicSample {
     }
     public static final void main(String[] args) {
         testBasic();
+        println("111111111111111111111");
         testJust();
+        println("22222222222222222222222");
         testAction1();
+        println("333333333333333");
     }
 }
