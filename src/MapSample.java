@@ -15,26 +15,7 @@ public class MapSample {
     public static void println(String s) {
         System.out.println(s);
     }
-    class  Course {
-        private String name;//课程名
-        private String id;
-    }
-    static class Student {
-        String name;
-        private List<Course> coursesList;//所修的课程
 
-        public Student(String name) {
-            this.name = name;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-    }
     public static final void main(String[] args) {
         testMapBasic();
         testMapTwice();
